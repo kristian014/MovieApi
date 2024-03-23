@@ -1,0 +1,1 @@
+﻿global using MovieApi.Domain.Common.Contracts;
