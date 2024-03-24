@@ -3,13 +3,14 @@ using MovieApi.Application.Catalog.Movies.Requests;
 using MovieApi.Domain.Entities;
 
 namespace MovieApi.Application.Catalog.Movies.Specs;
-public class MoviesBySearchRequestSpec : EntitiesByPaginationFilterSpec<Movie, MovieDTO>
+public class MoviesBySearchRequestSpec : EntitiesByPaginationFilterSpec<Movie, MovieDto>
 {
-    public MoviesBySearchRequestSpec(SearchMoviesRequests request)
+    public MoviesBySearchRequestSpec(SearchMoviesRequest request)
         : base(request)
     {
         Query
             .Include(x => x.Genre)
+            .Include(x => x.Language)
             .OrderBy(x => x.Title, !request.HasOrderBy());
 
         if (!string.IsNullOrWhiteSpace(request.Title))
@@ -19,23 +20,10 @@ public class MoviesBySearchRequestSpec : EntitiesByPaginationFilterSpec<Movie, M
                 .Where(x => x.Title.ToUpper().Contains(title));
         }
 
-        if (!string.IsNullOrWhiteSpace(request.GenreName))
+        if (request.GenreId.HasValue)
         {
-            string genreName = request.GenreName.ToUpper();
             Query
-                .Where(x => x.Genre != null && x.Genre.Name.ToUpper().Contains(genreName));
+              .Where(x => x.GenreId.Equals(request.GenreId.Value));
         }
     }
 }
-
-////{
-////  "pageNumber": 0,
-////  "pageSize": 0,
-////  "orderBy": [
-////    "ReleaseDate",
-////   "Title"
-////  ],
-////  "title": "the f",
-////  "genreName": "action",
-////   "releaseDate": "2020-10-13"
-////}

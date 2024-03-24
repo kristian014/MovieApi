@@ -2,7 +2,7 @@
 using MovieApi.Application.Catalog.Languages.DTOs;
 
 namespace MovieApi.Application.Catalog.Movies.DTOs;
-public class MovieDTO : IDto
+public class MovieDto : BaseEntityDto, IDto
 {
     public DateTime ReleaseDate { get; set; }
     public string Title { get; set; } = string.Empty;
@@ -13,8 +13,6 @@ public class MovieDTO : IDto
     public string PosterUrl { get; set; } = string.Empty;
     public DefaultIdType LanguageId { get; set; }
     public DefaultIdType GenreId { get; set; }
-
     public LanguageDTO? Language { get; private set; }
-
-    public GenreDTO? Genre { get; private set; }
+    public GenreDto? Genre { get; private set; }
 }

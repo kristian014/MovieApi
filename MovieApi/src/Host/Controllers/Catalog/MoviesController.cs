@@ -7,7 +7,7 @@ public class MoviesController : VersionedApiController
     [HttpPost("search")]
     [MustHavePermission(FSHAction.Search, FSHResource.Brands)]
     [OpenApiOperation("Search movies using available filters.", "")]
-    public Task<PaginationResponse<MovieDTO>> SearchAsync(SearchMoviesRequests request)
+    public Task<PaginationResponse<MovieDto>> SearchAsync(SearchMoviesRequest request)
     {
         return Mediator.Send(request);
     }

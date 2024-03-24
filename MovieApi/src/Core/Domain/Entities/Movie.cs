@@ -17,13 +17,13 @@ public class Movie : AuditableEntity, IAggregateRoot
 
     public Movie Update(DateTime? releaseDate, string? title, string? overView, double? popularity, int? voteCount, double? voteAverage, string? posterUrl, Guid? languageId, Guid? genreId)
     {
-        if (releaseDate is not null && popularity.Equals(ReleaseDate) is not true) ReleaseDate = (DateTime)releaseDate;
+        if (releaseDate is not null && releaseDate.Equals(ReleaseDate) is not true) ReleaseDate = (DateTime)releaseDate;
         if (title is not null && title.Equals(Title) is not true) Title = title;
-        if (overView is not null && Overview.Equals(Overview) is not true) Overview = Overview;
+        if (overView is not null && overView.Equals(Overview) is not true) Overview = overView;
         if (popularity is not null && popularity.Equals(Popularity) is not true) Popularity = (double)popularity;
         if (voteCount is not null && voteCount.Equals(VoteCount) is not true) VoteCount = (int)voteCount;
         if (voteAverage is not null && voteAverage.Equals(VoteAverage) is not true) VoteAverage = (double)voteAverage;
-        if (posterUrl is not null && posterUrl.Equals(PosterUrl) is not true) PosterUrl = PosterUrl;
+        if (posterUrl is not null && posterUrl.Equals(PosterUrl) is not true) PosterUrl = posterUrl;
         if (languageId is not null && languageId.Equals(LanguageId) is not true) LanguageId = (DefaultIdType)languageId;
         if (genreId is not null && genreId.Equals(GenreId) is not true) GenreId = (DefaultIdType)genreId;
 
