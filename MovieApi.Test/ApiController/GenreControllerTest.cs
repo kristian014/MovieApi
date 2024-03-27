@@ -41,7 +41,7 @@ namespace MovieApi.Test.ApiController
         }
 
         [Test]
-        public async Task SearchGenresByKeywordReturnsCoorectResult()
+        public async Task SearchGenresByKeywordReturnsCorrectResult()
         {
             // Arrange
             var genres = _genreDtos.Adapt<List<Genre>>();
