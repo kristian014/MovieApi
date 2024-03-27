@@ -8,6 +8,12 @@ public class GenresBySearchRequestSpec : EntitiesByPaginationFilterSpec<Genre, G
     public GenresBySearchRequestSpec(SearchGenresRequest request)
         : base(request)
     {
+        if (!string.IsNullOrEmpty(request.Keyword))
+        {
+            string key = request.Keyword.ToUpper();
+            Query.Where(x => x.Name.ToUpper().Contains(key));
+        }
+
         Query.OrderBy(c => c.Name, !request.HasOrderBy());
     }
 }

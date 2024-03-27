@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Migrators.PostgreSQL", "Mov
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Test", "MovieApi\tests\Infrastructure.Test\Infrastructure.Test.csproj", "{ED581C9B-5099-482E-AA40-18269D40D9D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Test", "Movie.Test\Movie.Test.csproj", "{B950CE6C-CD40-4770-87D1-2D9FFE41F75D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Test", "MovieApi.Test\MovieApi.Test.csproj", "{6A8DE7BA-E4A1-459D-A80E-D67B6C6C25A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +71,10 @@ Global
 		{ED581C9B-5099-482E-AA40-18269D40D9D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED581C9B-5099-482E-AA40-18269D40D9D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED581C9B-5099-482E-AA40-18269D40D9D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B950CE6C-CD40-4770-87D1-2D9FFE41F75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B950CE6C-CD40-4770-87D1-2D9FFE41F75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B950CE6C-CD40-4770-87D1-2D9FFE41F75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B950CE6C-CD40-4770-87D1-2D9FFE41F75D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8DE7BA-E4A1-459D-A80E-D67B6C6C25A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8DE7BA-E4A1-459D-A80E-D67B6C6C25A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8DE7BA-E4A1-459D-A80E-D67B6C6C25A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8DE7BA-E4A1-459D-A80E-D67B6C6C25A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

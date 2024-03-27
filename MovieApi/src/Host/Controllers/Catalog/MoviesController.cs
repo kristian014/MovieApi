@@ -5,7 +5,7 @@ namespace MovieApi.Host.Controllers.Catalog;
 public class MoviesController : VersionedApiController
 {
     [HttpPost("search")]
-    [MustHavePermission(FSHAction.Search, FSHResource.Brands)]
+    [MustHavePermission(FSHAction.Search, FSHResource.Movies)]
     [OpenApiOperation("Search movies using available filters.", "")]
     public Task<PaginationResponse<MovieDto>> SearchAsync(SearchMoviesRequest request)
     {

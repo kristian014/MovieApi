@@ -11,7 +11,7 @@ public class MoviesBySearchRequestSpec : EntitiesByPaginationFilterSpec<Movie, M
         Query
             .Include(x => x.Genre)
             .Include(x => x.Language)
-            .OrderBy(x => x.Title, !request.HasOrderBy());
+            .OrderByDescending(x => x.ReleaseDate, !request.HasOrderBy());
 
         if (!string.IsNullOrWhiteSpace(request.Title))
         {
