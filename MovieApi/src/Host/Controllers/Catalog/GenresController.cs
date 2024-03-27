@@ -1,5 +1,4 @@
-﻿using MovieApi.Application.Catalog.Brands;
-using MovieApi.Application.Catalog.Genres.DTOs;
+﻿using MovieApi.Application.Catalog.Genres.DTOs;
 using MovieApi.Application.Catalog.Genres.Requests;
 
 namespace MovieApi.Host.Controllers.Catalog;

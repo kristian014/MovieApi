@@ -64,9 +64,6 @@
         <ProjectReference Include="..\Core\Domain\Domain.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <None Update="Catalog\*.json" CopyToOutputDirectory="PreserveNewest" />
-    </ItemGroup>
-    <ItemGroup>
       <None Update="Movies\Files\Csv\mymoviedb.csv">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
