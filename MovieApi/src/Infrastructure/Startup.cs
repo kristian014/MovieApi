@@ -31,7 +31,6 @@ public static class Startup
         return services
             .AddApiVersioning()
             .AddAuth(config)
-            .AddBackgroundJobs(config)
             .AddCaching(config)
             .AddCorsPolicy(config)
             .AddExceptionMiddleware()
@@ -82,7 +81,6 @@ public static class Startup
             .UseMultiTenancy()
             .UseAuthorization()
             .UseRequestLogging(config)
-            .UseHangfireDashboard(config)
             .UseOpenApiDocumentation(config);
 
     public static IEndpointRouteBuilder MapEndpoints(this IEndpointRouteBuilder builder)

@@ -6,7 +6,7 @@ using MovieApi.Infrastructure.Persistence.Initialization;
 using System.Reflection;
 
 namespace MovieApi.Infrastructure.Catalog;
-public class BrandSeeder : ICustomSeeder
+public class BrandSeeder
 {
     private readonly ISerializerService _serializerService;
     private readonly ApplicationDbContext _db;
